@@ -22,7 +22,7 @@ const TodoList = () => {
         return (num++, setTodos([...todos, { id: num, title: title, content: content, isDone:false }]));
     }
 
-    const Done = (id) => {
+    const Done = (id) => {        
         setTodos(todos.map(
             todo => todo.id === id
             ?{...todo, isDone: !todo.isDone}
