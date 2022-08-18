@@ -6,14 +6,14 @@ const TodoList = () => {
     const [todos, setTodos] = useState([
         {
           id: 1,
-          title: "react",
-          content: "공부하기",
+          title: "title",
+          content: "content",
           isDone: false
         },
         {
             id: 2,
-            title: "react",
-            content: "공부하기",
+            title: "React",
+            content: "study",
             isDone: true
           },
       ]);
