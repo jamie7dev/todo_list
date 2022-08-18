@@ -5,7 +5,7 @@ const List = ({todos, Done, Remove}) => {
     console.log(todos)
     return (
         <div>
-            <p className="working-done">Working</p>
+            <p className="working">Working</p>
             <div className="todos-container">            
                 {todos.map((todo)=> 
                     todo.isDone===false?
@@ -14,7 +14,7 @@ const List = ({todos, Done, Remove}) => {
                 )}   
                 
             </div>
-            <p className="working-done">Done</p>
+            <p className="done">Done</p>
             <div className="todos-container"> 
                 {todos.map((todo) => 
                     todo.isDone===true?
