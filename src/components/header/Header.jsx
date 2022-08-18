@@ -1,10 +1,14 @@
-
+import "./style.css";
 
 const Header = () => {
     return (
-        <div className="container">
-            <div>My Todo List</div>
-            <div>React</div>  
+        <div className="header">
+            <div>
+                <p className="content">Chaewon Yoon</p>
+                <h2>My Todo List</h2>
+                
+            </div>
+              
         </div>
     )
 } 

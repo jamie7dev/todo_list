@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+.working-done{
+    width: 100%;
+    max-width: 1200px;
+    min-width: 800px;
+    padding-left: 60px;
+    margin: 10px 0 10px 0;
+    font-family: 'Secular One', sans-serif;
+    font-size: 18px;
+    color: rgb(88, 88, 88);
+}
+
+.todos-container{
+    width: 100%;
+    max-width: 1200px;
+    min-width: 800px;
+    padding-left: 60px;
+    
+}
+

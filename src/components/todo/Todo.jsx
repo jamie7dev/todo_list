@@ -1,11 +1,16 @@
+import './style.css';
+
+
 const Todo = ({todo, Remove, Done}) => {
     return (
         <div className="todo" key={todo.id}>
-            <h1>{todo.title}</h1>
-            <p>{todo.content}</p>
-            <button onClick={()=>Remove(todo.id)}>삭제하기</button>
-            <button onClick={()=>Done(todo.id)}>
-                {todo.isDone===false?"완료":"취소"}</button>
+            <h3 className="todo_title">{todo.title}</h3>
+            <p className="todo_content">{todo.content}</p>
+            
+            <button className='todo_btn' onClick={()=>Remove(todo.id)}>remove</button>
+            <button className='todo_btn' onClick={()=>Done(todo.id)}>
+                {todo.isDone===false?"done":"cancel"}</button>
+        
         </div>
         
     )

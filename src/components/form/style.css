@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+.container{
+    max-width: 1200px;
+    min-width: 800px;
+    margin: 0 0 20px 55px;
+}
+.title, .input_content {   
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 5px;
+    font-family: 'Secular One', sans-serif;
+    
+}
+
+.Add_btn{
+    margin: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: rgb(88, 88, 88);
+    font-family: 'Secular One', sans-serif;
+    
+}
+.Add_btn:hover{
+    background-color: cadetblue;
+    border: 1px solid #ddd;
+    color: white;
+}

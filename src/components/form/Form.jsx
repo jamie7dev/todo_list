@@ -1,3 +1,4 @@
+import "./style.css";
 import {useState} from "react";
 
 const Form = ({Addtodo}) => {
@@ -6,28 +7,28 @@ const Form = ({Addtodo}) => {
 
     return (
         <div className="container">
-            <input
+            <input className="title"
             type="text"
             value={title}
-            placeholder="제목"
+            placeholder="title"
             onChange={(event) => {
             setTitle(event.target.value);
             }}
         />
-        <input
+        <input className="input_content"
             type="text"
             value={content}
-            placeholder="내용"
+            placeholder="content"
             onChange={(event) => {
             setContent(event.target.value);
             }}
         />
-        <button
+        <button className="Add_btn"
             onClick={() => {
                 Addtodo(title, content);
             }}
         >
-            추가하기
+            Add
         </button>
         </div>
     )

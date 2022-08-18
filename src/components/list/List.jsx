@@ -1,24 +1,29 @@
 import Todo from "../todo/Todo";
+import "./style.css"
 
 const List = ({todos, Done, Remove}) => {
     console.log(todos)
     return (
-        <div className="todos-container">
-            <p>Working...</p>
-         {todos.map((todo)=>
-            todo.isDone===false?
-                <Todo todo={todo} Remove={Remove} Done={Done} key={todo.id}/>
-            :null
-         )
-         }   
-            <p>Done</p>
-
-        {todos.map((todo) => (
-            todo.isDone===true?
-            <Todo todo={todo} Remove={Remove} Done={Done} key={todo.id}/>
-            :null
-        ))}
+        <div>
+            <p className="working-done">Working</p>
+            <div className="todos-container">            
+                {todos.map((todo)=> 
+                    todo.isDone===false?
+                        <Todo todo={todo} Remove={Remove} Done={Done} key={todo.id}/>
+                    :null
+                )}   
+                
+            </div>
+            <p className="working-done">Done</p>
+            <div className="todos-container"> 
+                {todos.map((todo) => 
+                    todo.isDone===true?
+                    <Todo todo={todo} Remove={Remove} Done={Done} key={todo.id}/>
+                    :null
+                )}
+            </div>
         </div>
+       
     );
 } 
 

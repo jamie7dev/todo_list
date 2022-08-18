@@ -1,7 +1,7 @@
 import Layout from '../components/layout/Layout.jsx';  
 import {useState} from "react";
 
-
+let num = 2;
 const TodoList = () => {
     const [todos, setTodos] = useState([
         {
@@ -19,7 +19,7 @@ const TodoList = () => {
       ]);
 
     const Addtodo = (title, content) => {
-        setTodos([...todos, { id: todos.length + 1, title: title, content: content, isDone:false }]);
+        return (num++, setTodos([...todos, { id: num, title: title, content: content, isDone:false }]));
     }
 
     const Done = (id) => {

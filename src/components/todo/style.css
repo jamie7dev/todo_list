@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+.todo {
+    width: 150px;
+    height: 110px;
+    border: 1px solid dodgerblue;
+    padding : 5px;
+    border-radius: 8px;
+}
+
+.todo_title {
+    margin: 5px;
+    color: cadetblue;
+}
+
+.todo_content {
+    margin: 0 0 25px 5px;
+    font-size: 13px;
+    color: rgb(88, 88, 88);
+    font-family: 'Noto Sans KR', sans-serif; 
+    
+}
+
+.todo_btn {
+    margin: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: rgb(88, 88, 88);
+    font-size: 12px;
+    font-family: 'Secular One', sans-serif;
+}
+.todo_btn:hover{
+    background-color: cadetblue;
+    border: 1px solid #eee;
+    color: white;
+    font-family: 'Secular One', sans-serif;
+}
