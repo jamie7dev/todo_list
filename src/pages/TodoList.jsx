@@ -1,44 +1,26 @@
-import Layout from '../components/layout/Layout.jsx';  
-import {useState} from "react";
+import React, { useState } from "react";
+import Form from "../components/form/Form";
+import Header from "../components/header/Header";
+import Layout from "../components/layout/Layout";
+import List from "../components/list/List";
 
-let num = 2;
 const TodoList = () => {
-    const [todos, setTodos] = useState([
-        {
-          id: 1,
-          title: "title",
-          content: "content",
-          isDone: false
-        },
-        {
-            id: 2,
-            title: "React",
-            content: "study",
-            isDone: true
-          },
-      ]);
-
-    const Addtodo = (title, content) => {
-        return (num++, setTodos([...todos, { id: num, title: title, content: content, isDone:false }]));
+  const [todos, setTodos] = useState([
+    {
+      id: 1,
+      title: "리액트 공부하기",
+      body: "리액트 기초를 공부해봅시다.",
+      isDone: false,
     }
+  ]);
 
-    const Done = (id) => {        
-        setTodos(todos.map(
-            todo => todo.id === id
-            ?{...todo, isDone: !todo.isDone}
-            :todo
-        ))
-    }
-
-    const Remove = (id) => {
-        setTodos(todos.filter(
-            todo => todo.id !== id
-        ))
-    }
-    
-    return (<Layout Addtodo={Addtodo} todos={todos} Done={Done} Remove={Remove}/>
-    
-    )
-} 
+  return (
+    <Layout>
+      <Header />
+      <Form setTodos={setTodos} todos={todos} />
+      <List todos={todos} setTodos={setTodos} />
+    </Layout>
+  );
+};
 
 export default TodoList;

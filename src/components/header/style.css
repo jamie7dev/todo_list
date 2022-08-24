@@ -1,28 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
 *{
-    margin: 0;
+    margin: 0 auto;
 }
 
 .header{
     margin: 0 auto;
     max-width: 1200px;
     min-width: 800px;
-    padding: 0 0 30px 60px;
-    
+    padding: 60px 0 0 60px;
 }
-.content {
-    padding: 10px 60px 0 0;
-    text-align: right;
-    font-size: 10px;
-    color: cadetblue;
-    font-family: 'Silkscreen', cursive;
-}
-h2 {
+.header h1{
     margin: 0 auto;
     color: dodgerblue;
-    font-size: 40px;
+    font-size: 60px;
     font-family: 'Secular One', sans-serif;
     
 }
+.header nav{
+    padding: 0 60px 30px 0;
+    text-align: right;
+    font-size: 16px;
+    color: cadetblue;
+    font-family: 'Silkscreen', cursive;
+}
+
 
 

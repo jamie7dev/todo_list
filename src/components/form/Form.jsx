@@ -1,37 +1,59 @@
+import React, { useState } from "react";
 import "./style.css";
-import {useState} from "react";
+import { useDispatch } from "react-redux";
+import {addTodo} from '../../redux/modules/Todo';
 
-const Form = ({Addtodo}) => {
-    const [title, setTitle] = useState("");
-    const [content, setContent] = useState("");
+let number = 3;
+function Form() {
+  const dispatch = useDispatch();
+  
+  const initialState = {
+    id: 0,
+    title: "",
+    body: "",
+    isDone: false,
+  };
 
-    return (
-        <div className="container">
-            <input className="title"
-            type="text"
-            value={title}
-            placeholder="title"
-            onChange={(event) => {
-            setTitle(event.target.value);
-            }}
+  
+
+  const [todo, setTodo] = useState(initialState);
+  const onChangeHandler = (event) => {
+    const { name, value } = event.target;
+    setTodo({ ...todo, [name]: value });
+  };
+
+  const onSubmitHandler = (event) => {
+    event.preventDefault();
+    if (todo.title.trim() === "" || todo.body.trim() === "") return;
+    dispatch(addTodo({...todo, id: number}));
+    setTodo(initialState);
+    number++;
+  };
+
+  return (
+    <form onSubmit={onSubmitHandler} className="add-form">
+      <div className="input-group">
+        <label className="form-label">Title</label>
+        <input
+          type="text"
+          name="title"
+          value={todo.title}
+          className="add-input-title"
+          onChange={onChangeHandler}
         />
-        <input className="input_content"
-            type="text"
-            value={content}
-            placeholder="content"
-            onChange={(event) => {
-            setContent(event.target.value);
-            }}
+        <label className="form-label">Content</label>
+        <input
+          type="text"
+          name="body"
+          value={todo.body}
+          className="add-input-body"
+          onChange={onChangeHandler}
         />
-        <button className="Add_btn"
-            onClick={() => {
-                Addtodo(title, content);
-            }}
-        >
-            Add
-        </button>
-        </div>
-    )
-} 
+        <button className="add-button">Add</button>
+
+      </div>
+    </form>
+  );
+}
 
 export default Form;

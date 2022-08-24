@@ -1,16 +1,15 @@
+import React from "react";
 import "./style.css";
 
-const Header = () => {
-    return (
-        <div className="header">
-            <div>
-                <p className="content">Chaewon Yoon</p>
-                <h2>My Todo List</h2>
-                
-            </div>
-              
-        </div>
-    )
-} 
 
+function Header() {
+  return (
+    <div className="header">
+        <h1>My Todo List</h1>
+        <nav>Chaewon Yoon</nav>     
+    </div>
+  );
+}
 export default Header;
+
+

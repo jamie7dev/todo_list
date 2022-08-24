@@ -1,21 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
 
-.working, .done{
+.list-container{
     width: 100%;
-    max-width: 1200px;
+    max-width: 1000px;
     min-width: 800px;
-    padding-left: 60px;
-    margin: 10px 0 10px 0;
     font-family: 'Secular One', sans-serif;
-    font-size: 18px;
-    color: rgb(88, 88, 88);
+    margin: 30px 60px 30px 60px;
+    padding-bottom: 60px;
+    border-radius: 10px;
+
 }
 
-.todos-container{
-    width: 100%;
-    max-width: 1200px;
-    min-width: 800px;
-    padding-left: 60px;
-    
+.list-title {
+    padding: 40px;
+   display: block;
+   font-size: 2rem;
+   color: dodgerblue;
+   
 }
+.list-wrapper {
+   /* float: left; */
+   display: flex;
+   flex-wrap: wrap;
+   gap: 12px;
+}
+
+
 

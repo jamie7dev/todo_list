@@ -1,15 +1,8 @@
-import Header from '../header/Header.jsx';
-import Form from '../form/Form';
-import List from '../list/List';
+import React from "react";
+import "./style.css";
 
-const Layout = ({Addtodo, todos, Done, Remove}) => {
-    return (
-    <div className="layout">
-        <Header/>
-        <Form Addtodo={Addtodo}/>
-        <List todos={todos} Done={Done} Remove={Remove}/>
-    </div>
-    );
-} 
+const Layout = (props) => {
+  return <div className="layout">{props.children}</div>;
+};
 
 export default Layout;
